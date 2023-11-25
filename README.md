@@ -14,7 +14,7 @@ After=graphical-session.target
 
 [Service]
 Environment="DISPLAY=:0"
-ExecStart=/usr/bin/cvlc -f --no-osd  /home/admin/Developer/homekit-scripts/fireplace-stream/fireplace.mp4 -L
+ExecStart=/usr/bin/cvlc -f --no-osd  --input-repeat=99999999999 /home/admin/Developer/homekit-scripts/fireplace-stream/fireplace.mp4
 
 [Install]
 WantedBy=default.target
@@ -33,8 +33,7 @@ After=graphical-session.target
 
 [Service]
 Environment="DISPLAY=:0"
-ExecStart=/usr/bin/chromium-browser --start-fullscreen --incognito http://home-assistant.lan:8123/lovelace/radar?kiosk
-
+ExecStart=/usr/bin/chromium-browser --kiosk --incognito --noerrdialogs --hide-scrollbars --force-device-scale-factor=3.0 --canvas-oop-rasterization --ignore-gpu-blocklist --enable-gpu-rasterization --enable-zero-copy --enable-drdc --enable-features=VaapiVideoDecoder http://home-assistant.lan:8123/lovelace/radar?kiosk
 [Install]
 WantedBy=default.target
 ```
