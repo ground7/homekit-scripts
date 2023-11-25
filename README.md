@@ -4,7 +4,7 @@ Trigger HomeKit Scenes to Run Scripts Over SSH
 ### 🔥 Fireplace Stream 💧
 
 ```bash
-
+systemctl edit --user --force --full fireplace
 ```
 
 ```s
@@ -13,7 +13,8 @@ Description=Play VLC Fireplace Video From a Python Script
 After=graphical-session.target
 
 [Service]
-ExecStart=/usr/bin/screen -D -S pi -m /home/pi/Developer/homekit-scripts/fireplace-stream/fireplace.py
+Environment="DISPLAY=:0"
+ExecStart=/usr/bin/cvlc -f --no-osd  /home/admin/Developer/homekit-scripts/fireplace-stream/fireplace.mp4 -L
 
 [Install]
 WantedBy=default.target
