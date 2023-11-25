@@ -33,7 +33,7 @@ After=graphical-session.target
 
 [Service]
 Environment="DISPLAY=:0"
-ExecStart=/usr/bin/chromium-browser --noerrdialogs --disable-infobars --kiosk http://home-assistant.lan:8123/lovelace/radar?kiosk
+ExecStart=/usr/bin/chromium-browser --start-fullscreen --incognito http://home-assistant.lan:8123/lovelace/radar?kiosk
 
 [Install]
 WantedBy=default.target
