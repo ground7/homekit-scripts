@@ -13,7 +13,7 @@ Description=Play VLC Fireplace Video From a Python Script
 After=graphical-session.target
 
 [Service]
-ExecStart=/usr/bin/screen -D -S testvlc -m /home/pi/Developer/homekit-scripts/fireplace-stream/fireplace.py
+ExecStart=/usr/bin/screen -D -S pi -m /home/pi/Developer/homekit-scripts/fireplace-stream/fireplace.py
 
 [Install]
 WantedBy=default.target
