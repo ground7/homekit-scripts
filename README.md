@@ -1,5 +1,5 @@
-# homekit-scripts
-Trigger HomeKit Scenes to Run Scripts Over SSH
+# HomeKit Scripts
+This repo uses HomeKit scenes to run scripts over ssh. Each script toggles a systemd user service on a Sharp NEC raspberry pi display to show different things.
 
 ### 🔥 Fireplace Stream 💧
 
