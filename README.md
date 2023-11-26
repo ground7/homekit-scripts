@@ -34,6 +34,7 @@ After=graphical-session.target
 [Service]
 Environment="DISPLAY=:0"
 ExecStart=/usr/bin/chromium-browser --kiosk --incognito --noerrdialogs --hide-scrollbars --force-device-scale-factor=3.0 --canvas-oop-rasterization --ignore-gpu-blocklist --enable-gpu-rasterization --enable-zero-copy --enable-drdc --enable-features=VaapiVideoDecoder http://home-assistant.lan:8123/lovelace/radar?kiosk
+
 [Install]
 WantedBy=default.target
 ```
@@ -52,6 +53,7 @@ After=graphical-session.target
 [Service]
 Environment="DISPLAY=:0"
 ExecStart=/usr/bin/chromium-browser --kiosk --incognito --noerrdialogs --hide-scrollbars --force-device-scale-factor=3.0 http://uptime.hutchinson.house/status/family-room-tv
+
 [Install]
 WantedBy=default.target
 ```
